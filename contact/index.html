@@ -89,31 +89,37 @@
                 </div>
                 <div class="contact-form-block">
                     <h3 class="mb-3">Direct bericht sturen</h3>
-                    <form class="contact-form" action="https://formsubmit.co/8b0b7cd5c878c8c842de6b9028a16ff3" method="POST">
+                    <div data-fs-success style="display:none; padding: 1rem; background: #d4edda; color: #155724; border-radius: 0.5rem; margin-bottom: 1rem;">
+                        Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.
+                    </div>
+                    <div data-fs-error style="display:none; padding: 1rem; background: #f8d7da; color: #721c24; border-radius: 0.5rem; margin-bottom: 1rem;"></div>
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group row-group">
                             <div class="half-width">
                                 <label for="naam">Naam</label>
-                                <input type="text" id="naam" name="naam" placeholder="Uw volledige naam" required>
+                                <input type="text" id="naam" name="naam" placeholder="Uw volledige naam" required data-fs-field>
+                                <span data-fs-error="naam" style="color:#721c24; font-size:0.875rem;"></span>
                             </div>
                             <div class="half-width">
                                 <label for="email">E-mailadres</label>
-                                <input type="email" id="email" name="email" placeholder="uw.email@voorbeel.be" required>
+                                <input type="email" id="email" name="email" placeholder="uw.email@voorbeel.be" required data-fs-field>
+                                <span data-fs-error="email" style="color:#721c24; font-size:0.875rem;"></span>
                             </div>
                         </div>
                         <div class="form-group row-group">
                             <div class="half-width">
                                 <label for="telefoon">Telefoonnummer</label>
-                                <input type="tel" id="telefoon" name="telefoon" placeholder="+32 4... (optioneel)">
+                                <input type="tel" id="telefoon" name="telefoon" placeholder="+32 4... (optioneel)" data-fs-field>
                             </div>
                             <div class="half-width">
                                 <label for="woonplaats">Woonplaats / Postcode</label>
-                                <input type="text" id="woonplaats" name="woonplaats" placeholder="Bv. Antwerpen">
+                                <input type="text" id="woonplaats" name="woonplaats" placeholder="Bv. Antwerpen" data-fs-field>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="probleem">Kies een onderwerp/probleem</label>
                             <div class="select-wrapper">
-                                <select id="probleem" name="probleem" required>
+                                <select id="probleem" name="probleem" required data-fs-field>
                                     <option value="" disabled selected>Selecteer uw vraag of probleem</option>
                                     <option value="cv_storing">CV ketel gaat niet aan / storing / reparatie</option>
                                     <option value="lekkage">Lekkage of waterschade</option>
@@ -124,13 +130,20 @@
                                     <option value="andere">Andere vraag...</option>
                                 </select>
                             </div>
+                            <span data-fs-error="probleem" style="color:#721c24; font-size:0.875rem;"></span>
                         </div>
                         <div class="form-group">
                             <label for="bericht">Extra details of opmerking</label>
-                            <textarea id="bericht" name="bericht" rows="5" placeholder="Geef hier wat meer context zodat we u sneller kunnen helpen." required></textarea>
+                            <textarea id="bericht" name="bericht" rows="5" placeholder="Geef hier wat meer context zodat we u sneller kunnen helpen." required data-fs-field></textarea>
+                            <span data-fs-error="bericht" style="color:#721c24; font-size:0.875rem;"></span>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Verzenden</button>
+                        <button type="submit" class="btn btn-primary btn-submit" data-fs-submit-btn>Verzenden</button>
                     </form>
+                    <script>
+                        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+                        formspree('initForm', { formElement: '#contact-form', formId: 'xrevpywv' });
+                    </script>
+                    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
                 </div>
             </div>
         </div>
