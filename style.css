@@ -1320,3 +1320,37 @@ a.method-value:hover {
         width: calc(100% - 2rem);
     }
 }
+
+/* ===== Algemene voorwaarden ===== */
+.terms-layout { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; }
+.terms-toc { background: var(--clr-bg); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06); }
+.terms-toc ol { list-style: none; padding: 0; margin: 1rem 0 0; }
+.terms-toc a { display: flex; gap: 0.5rem; padding: 0.4rem 0; color: var(--clr-text); text-decoration: none; font-size: 0.9rem; line-height: 1.4; }
+.terms-toc a span { color: var(--clr-primary); font-weight: 600; white-space: nowrap; min-width: 4.6rem; }
+.terms-toc a:hover { color: var(--clr-primary); }
+.terms-article { background: var(--clr-bg); border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06); scroll-margin-top: 110px; }
+.terms-article h2 { font-size: 1.35rem; color: var(--clr-secondary); margin: 0 0 1.25rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.terms-num { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-primary); }
+.terms-article ol { padding-left: 1.4rem; margin: 0; }
+.terms-article ol > li { list-style: decimal; }
+.terms-article li { color: var(--clr-text); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 0.25rem; }
+.terms-article li::marker { color: var(--clr-primary); font-weight: 600; }
+.terms-article li.no-marker { list-style: none; }
+.terms-article a, .terms-download a, .form-terms a { color: var(--clr-primary); }
+.terms-note { background: var(--clr-primary-light); border-left: 4px solid var(--clr-primary); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
+.terms-note h4 { margin: 0 0 0.5rem; color: var(--clr-secondary); }
+.terms-note ul { padding-left: 1.2rem; margin: 0; }
+.terms-note ul > li { list-style: disc; margin-bottom: 0.25rem; }
+.terms-table-wrap { overflow-x: auto; }
+.terms-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.terms-table th, .terms-table td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+.terms-table th { background: var(--clr-secondary); color: var(--clr-text-inverse); font-weight: 600; }
+.terms-download { text-align: center; color: var(--clr-text-light); margin-top: 2rem; }
+.form-terms { font-size: 0.85rem; color: var(--clr-text-light); margin: 0 0 1rem; }
+.footer-legal { margin-top: 0.5rem; }
+.footer-legal a { color: inherit; text-decoration: underline; }
+@media (max-width: 1024px) {
+    .terms-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .terms-toc { position: static; max-height: none; }
+}
+@media (max-width: 600px) { .terms-article { padding: 1.5rem 1.25rem; } }

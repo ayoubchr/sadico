@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tabieb2be-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:\\Users\\ayoub\\Documents\\bussiness\\tabieb", "-l", "5500"],
+      "port": 5500
+    },
+    {
+      "name": "sadico-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", ".", "-l", "5510"],
+      "port": 5510
+    }
+  ]
+}
